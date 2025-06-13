@@ -43,6 +43,8 @@ const Layout = () => {
   return (
     <>
       <Outlet />
+
+      <div className='placeholder'></div>
       
       <TabBar className='tabs' onChange={onChange}>
         {tabs.map((item) => (

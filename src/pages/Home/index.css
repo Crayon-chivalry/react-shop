@@ -1,5 +1,5 @@
 .page {
-  min-height: 100vh;
+  padding: 0 0 15px;
   background-color: #fff;
 }
 
@@ -59,4 +59,24 @@
 .banner {
   margin-top: 10px;
   width: 100%;
+}
+
+.banner-grid {
+  margin-top: 10px;
+  padding: 0 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.banner-grid-img {
+  width: 100%;
+  display: block;
+}
+
+.banner-grid-item {
+  flex: 1;
+}
+
+.banner-grid-item:nth-child(2) .banner-grid-img:nth-child(2) {
+  margin-top: 7px;
 }

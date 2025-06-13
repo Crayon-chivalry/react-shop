@@ -3,12 +3,14 @@ import "./index.css";
 import { SearchBar, Swiper } from "antd-mobile";
 import { ScanningOutline, BellOutline } from "antd-mobile-icons";
 
+import GoodsList from "@/components/GoodsList"
+
 const appList = [
-  { name: "海外购", image: "/src/assets/images/home-gid1.png" },
-  { name: "新人专享", image: "/src/assets/images/home-gid2.png" },
-  { name: "直播", image: "/src/assets/images/home-gid3.png" },
-  { name: "积分商城", image: "/src/assets/images/home-gid4.png" },
-  { name: "附近门店", image: "/src/assets/images/home-gid5.png" },
+  { name: "海外购", image: "/src/assets/images/home-grid1.png" },
+  { name: "新人专享", image: "/src/assets/images/home-grid2.png" },
+  { name: "直播", image: "/src/assets/images/home-grid3.png" },
+  { name: "积分商城", image: "/src/assets/images/home-grid4.png" },
+  { name: "附近门店", image: "/src/assets/images/home-grid5.png" },
 ];
 
 const Home = () => {
@@ -38,6 +40,18 @@ const Home = () => {
       </div>
       
       <img src="/src/assets/images/home-banner.png" className="banner" />
+
+      <div className="banner-grid">
+        <div className="banner-grid-item">
+          <img src="/src/assets/images/banner-grid-left.png" className="banner-grid-img" />
+        </div>
+        <div className="banner-grid-item">
+          <img src="/src/assets/images/banner-grid-right1.png" className="banner-grid-img" />
+          <img src="/src/assets/images/banner-grid-right2.png" className="banner-grid-img" />
+        </div>
+      </div>
+
+      <GoodsList />
     </div>
   );
 };
