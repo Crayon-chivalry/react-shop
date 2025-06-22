@@ -1,5 +1,4 @@
-.page {
-  padding: 0 0 15px;
+.white-bg {
   background-color: #fff;
 }
 
@@ -63,7 +62,7 @@
 
 .banner-grid {
   margin-top: 10px;
-  padding: 0 12px;
+  padding: 0 10px 15px;
   display: flex;
   gap: 10px;
 }
