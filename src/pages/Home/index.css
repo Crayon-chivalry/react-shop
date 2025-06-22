@@ -1,7 +1,3 @@
-.white-bg {
-  background-color: #fff;
-}
-
 .header {
   width: 100%;
   height: 200px;
@@ -56,13 +52,12 @@
 }
 
 .banner {
-  margin-top: 10px;
+  margin-top: 5px;
   width: 100%;
 }
 
 .banner-grid {
-  margin-top: 10px;
-  padding: 0 10px 15px;
+  padding: 5px 10px;
   display: flex;
   gap: 10px;
 }
