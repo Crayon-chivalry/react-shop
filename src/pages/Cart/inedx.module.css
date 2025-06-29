@@ -1,0 +1,48 @@
+.nav-bar {
+  background-color: #fff;
+}
+
+.goods {
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.goods-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+}
+
+.goods-cover {
+  width: 100px;
+}
+
+.goods-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goods-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.goods-label {
+  margin-top: 6px;
+  color: gray;
+  font-size: 12px;
+}
+
+.goods-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.goods-price {
+  color: #e02020;
+}

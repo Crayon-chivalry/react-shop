@@ -22,7 +22,26 @@ const Category = () => {
             <SideBar.Item key={item.id} title={item.title} />
           ))}
         </SideBar>
-        <div className="content">1</div>
+        <div className="content">
+          <div className='grid'>
+            <div className='grid-item'>
+              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+              <div className='grid-name'>小米</div>
+            </div>
+            <div className='grid-item'>
+              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+              <div className='grid-name'>小米</div>
+            </div>
+            <div className='grid-item'>
+              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+              <div className='grid-name'>小米</div>
+            </div>
+            <div className='grid-item'>
+              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+              <div className='grid-name'>小米</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
