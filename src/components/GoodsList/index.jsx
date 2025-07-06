@@ -1,16 +1,16 @@
-import './index.css'
+import styles from './index.module.scss'
 
 import Masonry from 'react-masonry-css'
 
 const GoodsList = ({ list }) => {
   return (
-    <Masonry breakpointCols={2} className="my-masonry-grid">
+    <Masonry breakpointCols={2} className={styles['my-masonry-grid']}>
       {list.map(item =>
-        <div className="goods-item" key={item.id}>
-          <img src={item.cover} className="goods-cover" />
-          <div className="goods-content">
-            <div className="goods-name">{item.name}</div>
-            <div className="goods-price">￥<span>{item.price}</span></div>
+        <div className={styles['goods-item']} key={item.id}>
+          <img src={item.cover} className={styles['goods-cover']} />
+          <div className={styles['goods-content']}>
+            <div className={styles['goods-name']}>{item.name}</div>
+            <div className={styles['goods-price']}>￥<span>{item.price}</span></div>
           </div>
         </div>
       )}

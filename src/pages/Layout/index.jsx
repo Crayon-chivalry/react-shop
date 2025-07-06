@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from 'react-router-dom';
-import './index.css'
+import styles from './index.module.scss'
 
 import { TabBar } from "antd-mobile";
 import {
@@ -46,7 +46,7 @@ const Layout = () => {
 
       <div className='placeholder'></div>
       
-      <TabBar className='tabs' onChange={onChange}>
+      <TabBar className={styles['tabs']} onChange={onChange}>
         {tabs.map((item) => (
           <TabBar.Item
             key={item.key}

@@ -1,0 +1,41 @@
+.my-masonry-grid {
+  padding: $space-3;
+  display: flex;
+  gap: $space-2;
+}
+
+.goods-item {
+  border-radius: $space-2;
+  background-color: #fff;
+
+  &:nth-child(n+2) {
+    margin-top: $space-2;
+  }
+
+  .goods-cover {
+    display: block;
+    width: 100%;
+    border-radius: $space-2;
+  }
+
+  .goods-content {
+    padding: $space-2;
+  }
+  
+  .goods-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  
+  .goods-price {
+    margin-top: $space-2;
+    color: $primary-color;
+    font-weight: bold;
+
+    span {
+      font-size: 16px;
+    }
+  }
+}

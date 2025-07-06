@@ -1,5 +1,5 @@
 import { NavBar, Stepper, Checkbox } from "antd-mobile";
-import styles from './inedx.module.css'
+import styles from './inedx.module.scss'
 
 const Cart = () => {
   return (

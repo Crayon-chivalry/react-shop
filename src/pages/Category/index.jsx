@@ -1,4 +1,4 @@
-import './index.css'
+import styles from './index.module.scss'
 import { SearchBar, SideBar } from 'antd-mobile'
 
 const tabs = [
@@ -10,40 +10,40 @@ const tabs = [
 
 const Category = () => {
   return (
-    <div className="category">
-      <div className='category-header'>
-        <SearchBar placeholder="请输入内容" className="search" />
+    <>
+      <div className={styles['header']}>
+        <SearchBar placeholder="请输入内容" />
       </div>
       
 
-      <div className='category-row'>
+      <div className={styles['category-row']}>
         <SideBar>
           {tabs.map((item) => (
             <SideBar.Item key={item.id} title={item.title} />
           ))}
         </SideBar>
-        <div className="content">
-          <div className='grid'>
-            <div className='grid-item'>
-              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+        <div className={styles['content']}>
+          <div className={styles['grid']}>
+            <div className={styles['grid-item']}>
+              <img src='/src/assets/images/xiaomi.png' className={styles['grid-cover']} />
               <div className='grid-name'>小米</div>
             </div>
-            <div className='grid-item'>
-              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+            <div className={styles['grid-item']}>
+              <img src='/src/assets/images/xiaomi.png' className={styles['grid-cover']} />
               <div className='grid-name'>小米</div>
             </div>
-            <div className='grid-item'>
-              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+            <div className={styles['grid-item']}>
+              <img src='/src/assets/images/xiaomi.png' className={styles['grid-cover']} />
               <div className='grid-name'>小米</div>
             </div>
-            <div className='grid-item'>
-              <img src='/src/assets/images/xiaomi.png' className='grid-cover' />
+            <div className={styles['grid-item']}>
+              <img src='/src/assets/images/xiaomi.png' className={styles['grid-cover']} />
               <div className='grid-name'>小米</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,6 @@ import { RouterProvider } from 'react-router-dom';
 import router from './router';
 
 import 'normalize.css'
-import './index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

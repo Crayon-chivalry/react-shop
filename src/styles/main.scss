@@ -1,0 +1,29 @@
+$primary-color: #F83D3D;
+$text-color: #333;
+$gray-color: #808080;
+
+$space-unit: 4px;
+$space-1: $space-unit;
+$space-2: $space-unit * 2;
+$space-3: $space-unit * 3;
+$space-4: $space-unit * 4;
+$space-6: $space-unit * 6;
+$space-2_5: $space-unit * 2.5;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  font-size: 14px;
+  color: $text-color;
+  background-color: #f2f2f2;
+}

@@ -1,4 +1,4 @@
-import "./index.css";
+import styles from './index.module.scss'
 
 import { SearchBar, Swiper } from "antd-mobile";
 import { ScanningOutline, BellOutline } from "antd-mobile-icons";
@@ -48,44 +48,44 @@ const goodsList = [
 
 const Home = () => {
   return (
-    <div className="page">
-      <div className="header">
-        <div className="header-row">
-          <ScanningOutline color="#fff" />
-          <SearchBar placeholder="请输入内容" className="search" />
-          <BellOutline color="#fff" />
+    <>
+      <div className={styles['header']}>
+        <div className={styles['header-row']}>
+          <ScanningOutline />
+          <SearchBar placeholder="请输入内容" className={styles['search']} />
+          <BellOutline />
         </div>
       </div>
 
-      <Swiper indicatorProps={{ color: "white" }} className="swiper">
+      <Swiper indicatorProps={{ color: "white" }} className={styles['swiper']}>
         <Swiper.Item>
-          <img src="/src/assets/images/home-swiper.png" className="swiper-image" />
+          <img src="/src/assets/images/home-swiper.png" className={styles['swiper-image']} />
         </Swiper.Item>
       </Swiper>
 
-      <div className="app-list">
+      <div className={styles['navigation']}>
         {appList.map((item, index) => (
-          <div className="app-item" key={index}>
-            <img src={item.image} className="app-image" />
+          <div className={styles['navigation-item']} key={index}>
+            <img src={item.image} className={styles['navigation-cover']} />
             <div>{item.name}</div>
           </div>
         ))}
       </div>
 
-      <img src="/src/assets/images/home-banner.png" className="banner" />
+      <img src="/src/assets/images/home-banner.png" className={styles['banner']} />
 
-      <div className="banner-grid">
-        <div className="banner-grid-item">
-          <img src="/src/assets/images/banner-grid-left.png" className="banner-grid-img" />
+      <div className={styles['banner-grid']}>
+        <div className={styles['banner-grid-item']}>
+          <img src="/src/assets/images/banner-grid-left.png" className={styles['banner-grid-img']} />
         </div>
-        <div className="banner-grid-item">
-          <img src="/src/assets/images/banner-grid-right1.png" className="banner-grid-img" />
-          <img src="/src/assets/images/banner-grid-right2.png" className="banner-grid-img" />
+        <div className={styles['banner-grid-item']}>
+          <img src="/src/assets/images/banner-grid-right1.png" className={styles['banner-grid-img']} />
+          <img src="/src/assets/images/banner-grid-right2.png" className={styles['banner-grid-img']} />
         </div>
       </div>
 
       <GoodsList list={goodsList} />
-    </div>
+    </>
   );
 };
 
