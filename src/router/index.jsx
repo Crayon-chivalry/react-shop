@@ -5,6 +5,7 @@ import Home from "@/pages/Home";
 import Category from "@/pages/Category";
 import Cart from "@/pages/Cart";
 import User from "@/pages/User";
+import Goods from "@/pages/Goods";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
         element: <User />
       },
     ]
-  }
+  },
+  {
+    path: 'goods',
+    element: <Goods />
+  },
 ])
 
 export default router

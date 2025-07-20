@@ -1,6 +1,7 @@
-$primary-color: #F83D3D;
-$text-color: #333;
-$gray-color: #808080;
+$primary-color: #F83D3D; // 主要颜色，主题色
+$text-color: #333;       // 文本颜色
+$gray-color: #808080;   // 灰色颜色
+$bg-color: #f2f2f2;     // 背景颜色
 
 $space-unit: 4px;
 $space-1: $space-unit;
@@ -25,5 +26,17 @@ $space-2_5: $space-unit * 2.5;
 body {
   font-size: 14px;
   color: $text-color;
-  background-color: #f2f2f2;
+  background-color: $bg-color;
+}
+
+.app-nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: #fff;
+}
+
+:root:root {
+  // antDesign 变量自定义
+  --adm-color-primary: #{$primary-color};
 }

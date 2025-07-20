@@ -1,0 +1,110 @@
+.header {
+  height: 140px;
+  padding: $space-4;
+  background-color: $primary-color;
+
+  .header-top {
+    display: flex;
+    justify-content: flex-end;
+    gap: $space-6;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .user {
+    margin-top: $space-6;
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    color: #fff;
+
+    .user-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .user-name {
+      margin-bottom: $space-1;
+      font-size: 16px;
+    }
+  }
+}
+
+.wallet {
+  margin: -40px $space-3 0;
+  padding: $space-4 0;
+  display: flex;
+  border-radius: 6px;
+  background-color: #fff;
+
+  .wallet-item {
+    flex: 1;
+    text-align: center;
+
+    .wallet-amount {
+      margin-bottom: $space-2;
+    }
+
+    .wallet-name {
+      font-size: 12px;
+    }
+  }
+}
+
+.card {
+  margin: $space-3;
+  border-radius: 6px;
+  background-color: #fff;
+
+  .card-header {
+    padding: $space-3;
+    @include flex-between;
+    border-bottom: 1px solid rgba(233, 231, 231, .4);
+
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .more {
+      display: flex;
+      gap: $space-1;
+      color: $gray-color;
+      font-size: 13px;
+    }
+  }
+
+  .order {
+    padding: $space-4 0;
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+
+    .order-item {
+      flex: 1;
+    }
+
+    .order-image {
+      margin-bottom: $space-1;
+      width: 30px;
+    }
+  }
+
+  .navigation {
+    padding: $space-4 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    .navigation-item {
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .navigation-image {
+      margin-bottom: $space-1;
+      width: 25px;
+    }
+  }
+}

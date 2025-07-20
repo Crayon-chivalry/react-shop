@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import styles from './index.module.scss'
 
 import { TabBar } from "antd-mobile";
@@ -33,10 +33,11 @@ const tabs = [
 ]
 
 const Layout = () => {
+  const location = useLocation()
   const navigate = useNavigate()
-
+  const activeKey = location.pathname
+  
   const onChange = (key) => {
-    console.log(key)
     navigate(key)
   }
 
@@ -44,9 +45,9 @@ const Layout = () => {
     <>
       <Outlet />
 
-      <div className='placeholder'></div>
+      <div className={styles['placeholder']}></div>
       
-      <TabBar className={styles['tabs']} onChange={onChange}>
+      <TabBar className={styles['tabs']} activeKey={activeKey} onChange={onChange}>
         {tabs.map((item) => (
           <TabBar.Item
             key={item.key}

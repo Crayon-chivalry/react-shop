@@ -6,10 +6,6 @@
   z-index: 99;
   background-color: #fff;
   box-shadow: 0 -1px rgba(236, 233, 233, 0.6);
-
-  :global(.adm-tab-bar-item-active) {
-    color: $primary-color;
-  }
 }
 
 .placeholder {

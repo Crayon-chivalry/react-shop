@@ -26,6 +26,17 @@ const Cart = () => {
           </div>
         </div>
       </div>
+
+      <div className={styles['submit-bar']}>
+        <div className={styles['submit-left']}>
+          <Checkbox style={{'--icon-size': '18px'}} />
+          <span>全选</span>
+        </div>
+        <div className={styles['submit-content']}>
+          <div>合计：<span className={styles['submit-amount']}>￥0.00</span></div>
+          <div className={styles['submit-btn']}>结算</div>
+        </div>
+      </div>
     </>
   );
 };
