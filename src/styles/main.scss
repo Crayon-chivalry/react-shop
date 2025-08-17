@@ -2,14 +2,23 @@ $primary-color: #F83D3D; // 主要颜色，主题色
 $text-color: #333;       // 文本颜色
 $gray-color: #808080;   // 灰色颜色
 $bg-color: #f2f2f2;     // 背景颜色
+$border-color: rgba(231, 227, 227, 0.4); //边框颜色
 
+// 边距
 $space-unit: 4px;
 $space-1: $space-unit;
 $space-2: $space-unit * 2;
 $space-3: $space-unit * 3;
 $space-4: $space-unit * 4;
 $space-6: $space-unit * 6;
-$space-2_5: $space-unit * 2.5;
+
+// 圆角
+$radius-unit: 2px;
+$radius-1: $radius-unit;
+$radius-2: $radius-unit * 2;
+$radius-3: $radius-unit * 3;
+$radius-4: $radius-unit * 4;
+$radius-round: 50%;
 
 @mixin flex-center {
   display: flex;
@@ -21,6 +30,13 @@ $space-2_5: $space-unit * 2.5;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@mixin text-hidden($ilnes: 1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $ilnes;
+  overflow: hidden;
 }
 
 body {

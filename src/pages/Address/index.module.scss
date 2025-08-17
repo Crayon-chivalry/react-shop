@@ -1,0 +1,52 @@
+.address {
+  padding: $space-3 $space-3 64px;
+}
+
+.address-item {
+  margin-bottom: $space-3;
+  padding: $space-3;
+  border-radius: $radius-2;
+  background-color: #fff;
+
+  .address-header {
+    @include flex-between
+  }
+
+  .address-details {
+    margin-top: $space-3;
+    color: $gray-color;
+    font-size: 13px;
+  }
+
+  .address-footer {
+    margin-top: $space-3;
+    padding-top: $space-3;
+    @include flex-between;
+    border-top: 1px solid $border-color;
+  }
+}
+
+.checkbox {
+  --font-size: 14px;
+  --icon-size: 18px;
+}
+
+.btn-wrap {
+  display: flex;
+  gap: $space-6;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: $space-1;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $space-3;
+  background-color: #fff;
+}

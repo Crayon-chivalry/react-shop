@@ -92,7 +92,7 @@
       height: 80%;
       width: 2px;
       transform: translateY(-50%);
-      border-radius: 2px;
+      border-radius: $radius-1;
       background-color: $primary-color;
     }
   }

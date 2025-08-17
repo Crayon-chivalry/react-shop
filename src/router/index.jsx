@@ -6,6 +6,9 @@ import Category from "@/pages/Category";
 import Cart from "@/pages/Cart";
 import User from "@/pages/User";
 import Goods from "@/pages/Goods";
+import Order from "@/pages/Order";
+import Invite from "@/pages/Invite";
+import Address from "@/pages/Address";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,18 @@ const router = createBrowserRouter([
     path: 'goods',
     element: <Goods />
   },
+  {
+    path: 'order',
+    element: <Order />
+  },
+  {
+    path: 'invite',
+    element: <Invite />
+  },
+  {
+    path: 'address',
+    element: <Address />
+  }
 ])
 
 export default router

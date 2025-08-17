@@ -10,38 +10,35 @@
     display: flex;
     gap: $space-3;
     padding: $space-2;
-  
-    .goods-cover {
-      width: 100px;
-    }
+  }
+}
 
-    .goods-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+.goods-cover {
+  width: 100px;
+}
 
-    .goods-name {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-    }
+.goods-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    .goods-label {
-      margin-top: $space-2;
-      color: gray;
-      font-size: 12px;
-    }
+  .goods-name {
+    @include text-hidden(2)
+  }
 
-    .goods-cell {
-      @include flex-between
-    }
+  .goods-label {
+    margin-top: $space-2;
+    color: gray;
+    font-size: 12px;
+  }
 
-    .goods-price {
-      color: #e02020;
-    }
+  .goods-cell {
+    @include flex-between;
+  }
+
+  .goods-price {
+    color: #e02020;
   }
 }
 
@@ -73,11 +70,11 @@
   }
 
   .submit-btn {
-    padding: $space-2_5 0;
+    padding: $space-2 + 2 0;
     width: 100px;
     color: #fff;
     text-align: center;
-    border-radius: 4px;
+    border-radius: $radius-2;
     background-color: $primary-color;
   }
 }

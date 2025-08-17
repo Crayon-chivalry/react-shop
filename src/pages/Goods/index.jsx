@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useThrottleFn } from 'ahooks'
 import styles from "./index.module.scss";
 
@@ -14,6 +15,7 @@ const tabItems = [
 const tabHeight = 45
 
 const Goods = () => {
+  const navigate = useNavigate()
   const [activeKey, setActiveKey] = useState("1")
 
   // tabs 点击事件
@@ -43,6 +45,11 @@ const Goods = () => {
     wait: 100
   })
 
+  // 返回
+  const onBack = () => {
+    navigate(-1)
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return() => {
@@ -53,7 +60,7 @@ const Goods = () => {
   return (
     <>
       {/* 顶部导航栏 */}
-      <NavBar className={styles['app-nav-bar']} right={<MoreOutline />}>
+      <NavBar className={styles['app-nav-bar']} right={<MoreOutline />} onBack={onBack}>
         <Tabs
           activeKey={activeKey}
           onChange={tabsChange}

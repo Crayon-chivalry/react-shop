@@ -5,7 +5,7 @@
 }
 
 .goods-item {
-  border-radius: $space-2;
+  border-radius: $radius-2;
   background-color: #fff;
 
   &:nth-child(n+2) {
@@ -15,7 +15,7 @@
   .goods-cover {
     display: block;
     width: 100%;
-    border-radius: $space-2;
+    border-radius: $radius-2;
   }
 
   .goods-content {
@@ -23,10 +23,7 @@
   }
   
   .goods-name {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+    @include text-hidden(2)
   }
   
   .goods-price {
