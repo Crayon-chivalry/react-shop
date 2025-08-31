@@ -1,0 +1,55 @@
+.page {
+  min-height: 100vh;
+  padding: $space-2 * 10 $space-4 $space-4;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tabs {
+  margin-top: $space-6;
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  
+  .tabs-item {
+    font-size: 16px;
+  }
+}
+
+.form {
+  margin-top: $space-6;
+
+  .form-item {
+    padding: $space-3;
+    border-radius: $radius-3;
+    background-color: rgb(246, 246, 246);
+
+    &:nth-child(n + 2) {
+      margin-top: $space-4;
+    }
+  }
+}
+
+.agreement {
+  margin-top: $space-6;
+  font-size: 12px;
+  color: $gray-color;
+}
+
+.link-text {
+  margin: 0 $space-1;
+  color: $primary-color;
+}
+
+.btn {
+  margin-top: $space-6;
+}
+
+:global(.adm-input) {
+  --font-size: 14px;
+}

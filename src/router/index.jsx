@@ -5,6 +5,7 @@ import Home from "@/pages/Home";
 import Category from "@/pages/Category";
 import Cart from "@/pages/Cart";
 import User from "@/pages/User";
+import Login from "@/pages/Login";
 import Goods from "@/pages/Goods";
 import Order from "@/pages/Order";
 import Invite from "@/pages/Invite";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: 'address',
     element: <Address />
+  },
+  {
+    path: 'login',
+    element: <Login />
   }
 ])
 
