@@ -10,50 +10,55 @@ import Goods from "@/pages/Goods";
 import Order from "@/pages/Order";
 import Invite from "@/pages/Invite";
 import Address from "@/pages/Address";
+import Search from "@/pages/Search";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
       },
       {
-        path: 'category',
-        element: <Category />
+        path: "category",
+        element: <Category />,
       },
       {
-        path: 'cart',
-        element: <Cart />
+        path: "cart",
+        element: <Cart />,
       },
       {
-        path: 'user',
-        element: <User />
+        path: "user",
+        element: <User />,
       },
-    ]
+    ],
   },
   {
-    path: 'goods',
-    element: <Goods />
+    path: "goods",
+    element: <Goods />,
   },
   {
-    path: 'order',
-    element: <Order />
+    path: "order",
+    element: <Order />,
   },
   {
-    path: 'invite',
-    element: <Invite />
+    path: "invite",
+    element: <Invite />,
   },
   {
-    path: 'address',
-    element: <Address />
+    path: "address",
+    element: <Address />,
   },
   {
-    path: 'login',
-    element: <Login />
-  }
-])
+    path: "search",
+    element: <Search />,
+  },
+  {
+    path: "login",
+    element: <Login />,
+  },
+]);
 
-export default router
+export default router;

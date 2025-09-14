@@ -1,7 +1,8 @@
-import styles from './index.module.scss'
+import styles from "./index.module.scss";
+import { useNavigate } from "react-router-dom";
 
-import { SearchBar, Swiper } from "antd-mobile";
-import { ScanningOutline, BellOutline } from "antd-mobile-icons";
+import { Swiper } from "antd-mobile";
+import { ScanningOutline, BellOutline, SearchOutline } from "antd-mobile-icons";
 
 import GoodsList from "@/components/GoodsList";
 
@@ -47,40 +48,64 @@ const goodsList = [
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const onSearchClick = () => {
+    navigate("/search");
+  };
+
   return (
     <>
-      <div className={styles['header']}>
-        <div className={styles['header-row']}>
+      <div className={styles["header"]}>
+        <div className={styles["header-row"]}>
           <ScanningOutline />
-          <SearchBar placeholder="请输入内容" className={styles['search']} />
+          <div className={styles["search"]} onClick={onSearchClick}>
+            <SearchOutline />
+            <div>请输入内容</div>
+          </div>
           <BellOutline />
         </div>
       </div>
 
-      <Swiper indicatorProps={{ color: "white" }} className={styles['swiper']}>
+      <Swiper indicatorProps={{ color: "white" }} className={styles["swiper"]}>
         <Swiper.Item>
-          <img src="/src/assets/images/home-swiper.png" className={styles['swiper-image']} />
+          <img
+            src="/src/assets/images/home-swiper.png"
+            className={styles["swiper-image"]}
+          />
         </Swiper.Item>
       </Swiper>
 
-      <div className={styles['navigation']}>
+      <div className={styles["navigation"]}>
         {appList.map((item, index) => (
-          <div className={styles['navigation-item']} key={index}>
-            <img src={item.image} className={styles['navigation-cover']} />
+          <div className={styles["navigation-item"]} key={index}>
+            <img src={item.image} className={styles["navigation-cover"]} />
             <div>{item.name}</div>
           </div>
         ))}
       </div>
 
-      <img src="/src/assets/images/home-banner.png" className={styles['banner']} />
+      <img
+        src="/src/assets/images/home-banner.png"
+        className={styles["banner"]}
+      />
 
-      <div className={styles['banner-grid']}>
-        <div className={styles['banner-grid-item']}>
-          <img src="/src/assets/images/banner-grid-left.png" className={styles['banner-grid-img']} />
+      <div className={styles["banner-grid"]}>
+        <div className={styles["banner-grid-item"]}>
+          <img
+            src="/src/assets/images/banner-grid-left.png"
+            className={styles["banner-grid-img"]}
+          />
         </div>
-        <div className={styles['banner-grid-item']}>
-          <img src="/src/assets/images/banner-grid-right1.png" className={styles['banner-grid-img']} />
-          <img src="/src/assets/images/banner-grid-right2.png" className={styles['banner-grid-img']} />
+        <div className={styles["banner-grid-item"]}>
+          <img
+            src="/src/assets/images/banner-grid-right1.png"
+            className={styles["banner-grid-img"]}
+          />
+          <img
+            src="/src/assets/images/banner-grid-right2.png"
+            className={styles["banner-grid-img"]}
+          />
         </div>
       </div>
 

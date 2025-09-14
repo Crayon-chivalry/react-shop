@@ -12,10 +12,19 @@
     font-size: 24px;
     color: #fff;
   }
+}
 
-  .search {
-    flex: 1;
-  }
+.search {
+  flex: 1;
+  padding: 0 $space-2;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: $space-1;
+  background-color: #f5f5f5;
+  border-radius: $radius-2;
+  color: $gray-color;
+  font-size: 14px;
 }
 
 .swiper {
