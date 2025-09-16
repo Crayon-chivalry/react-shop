@@ -6,6 +6,8 @@ import Category from "@/pages/Category";
 import Cart from "@/pages/Cart";
 import User from "@/pages/User";
 import Login from "@/pages/Login";
+import Register from "@/pages/Register";
+import ResetPassword from "@/pages/ResetPassword";
 import Goods from "@/pages/Goods";
 import Order from "@/pages/Order";
 import Invite from "@/pages/Invite";
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+  },
+  {
+    path: "Register",
+    element: <Register />,
+  },
+  {
+    path: "ResetPassword",
+    element: <ResetPassword />,
   },
 ]);
 

@@ -13,22 +13,6 @@
   font-weight: bold;
 }
 
-.tabs {
-  margin-top: $space-6;
-  display: flex;
-  align-items: center;
-  gap: $space-4;
-  
-  .tabs-item {
-    font-size: 16px;
-    color: $gray-color;
-  }
-
-  .tabs-active {
-    color: $primary-color;
-  }
-}
-
 .form {
   margin-top: $space-6;
   --border-bottom: none;
@@ -49,6 +33,17 @@
   color: $primary-color;
 }
 
+.btn {
+  margin-top: $space-6;
+}
+
+.links {
+  margin-top: $space-6;
+  @include flex-center;
+  font-size: 12px;
+  color: $gray-color;
+}
+
 .agreement {
   position: absolute;
   bottom: 20px;
@@ -66,17 +61,6 @@
 .link-text {
   margin: 0 $space-1;
   color: $primary-color;
-}
-
-.links {
-  margin-top: $space-6;
-  @include flex-between;
-  font-size: 12px;
-  color: $gray-color;
-}
-
-.btn {
-  margin-top: $space-6;
 }
 
 :global(.adm-input) {
