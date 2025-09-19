@@ -1,0 +1,144 @@
+@mixin bg-section($image) {
+  background-image: url('@/assets/images/#{$image}.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page {
+  position: relative;
+}
+
+.page-bg {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  position: absolute;
+  top: 360px;
+  left: 0;
+  right: 0;
+}
+
+.reward {
+  padding: 40px 46px 0;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  box-sizing: border-box;
+  @include bg-section("invite-section1");
+
+  .reward-item {
+    flex: 1;
+    text-align: center;
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.btn {
+  margin-top: $space-4;
+  height: 60px;
+  @include bg-section("invite-btn");
+}
+
+.income {
+  margin-top: $space-4;
+  padding: 20px 20px 0;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  box-sizing: border-box;
+  @include bg-section("invite-section2");
+
+  .income-item {
+    flex: 1;
+    text-align: center;
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.rules {
+  margin-top: $space-4;
+  padding: 20px 20px 0;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  box-sizing: border-box;
+  @include bg-section("invite-section3");
+}
+
+.poster {
+  width: 260px;
+  position: relative;
+  
+  .poster-bg {
+    width: 100%;
+    display: block;
+  }
+
+  .poster-header {
+    position: absolute;
+    top: 220px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .poster-qr {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+  }
+
+  .poster-title {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .poster-code {
+    margin-top: $space-1;
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+
+.mask {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .mask-footer {
+    margin-top: $space-3;
+    display: flex;
+    justify-content: center;
+    gap: $space-3;
+
+    .mask-btn {
+      width: 120px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      border-radius: $radius-2;
+      background-color: #fff;
+
+      &:nth-child(2) {
+        color: #fff;
+        background-color: $primary-color;
+      }
+    }
+  }
+}

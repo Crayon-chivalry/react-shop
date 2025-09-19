@@ -1,0 +1,19 @@
+.container {
+  padding: $space-3;
+}
+
+.form {
+  --border-bottom: none;
+  --border-top: none;
+  padding: $space-1;
+  background-color: #fff;
+  border-radius: $radius-2;
+}
+
+.send-btn {
+  color: $primary-color;
+}
+
+.btn {
+  margin-top: $space-4;
+}
