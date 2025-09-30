@@ -100,8 +100,8 @@ const Login = () => {
       </Form>
 
       <div className={styles["links"]}>
-        <div onClick={() => toPages('/Register')}>还没有账号？去注册</div>
-        <div onClick={() => toPages('/ResetPassword')}>忘记密码</div>
+        <div onClick={() => toPages('/register')}>还没有账号？去注册</div>
+        <div onClick={() => toPages('/resetPassword')}>忘记密码</div>
       </div>
 
       <Button

@@ -1,14 +1,36 @@
-import styles from "./index.module.scss";
+import { useNavigate } from "react-router-dom";
 
-import { Checkbox, Button } from "antd-mobile";
+import { Checkbox, Button, Dialog } from "antd-mobile";
 import { EditSOutline, DeleteOutline } from "antd-mobile-icons";
 
+import styles from "./index.module.scss";
 import AppNavBar from "@/components/AppNavBar";
 
 const Address = () => {
+  const navigate = useNavigate()
+
+  // 添加/编辑 点击
+  const handleEditClick = (id) => {
+    if(id) {
+      navigate("/AddressEdit?id=" + id)
+    } else {
+      navigate("/AddressEdit")
+    }
+  }
+
+  // 删除
+  const handleDelete = () => {
+    Dialog.confirm({
+      content: '确定要删除吗？',
+      onConfirm: () => {
+        console.log('删除')
+      }
+    })
+  }
+
   return (
     <>
-      <AppNavBar title="我的地址" />
+      <AppNavBar title="地址管理" />
 
       <div className={styles["address"]}>
         <div className={styles["address-item"]}>
@@ -24,11 +46,11 @@ const Address = () => {
               默认地址
             </Checkbox>
             <div className={styles["btn-wrap"]}>
-              <div className={styles["btn"]}>
+              <div className={styles["btn"]} onClick={() => handleEditClick(1)}>
                 <EditSOutline />
                 <span>编辑</span>
               </div>
-              <div className={styles["btn"]}>
+              <div className={styles["btn"]} onClick={() => handleDelete(1)}>
                 <DeleteOutline />
                 <span>删除</span>
               </div>
@@ -38,7 +60,7 @@ const Address = () => {
       </div>
 
       <div className={styles["footer"]}>
-        <Button block color="primary" shape="rounded">
+        <Button block color="primary" shape="rounded" onClick={() => handleEditClick()}>
           添加地址
         </Button>
       </div>

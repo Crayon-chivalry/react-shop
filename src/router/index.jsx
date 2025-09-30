@@ -4,7 +4,6 @@ import Layout from "@/pages/Layout";
 import Home from "@/pages/Home";
 import Category from "@/pages/Category";
 import Cart from "@/pages/Cart";
-import User from "@/pages/User";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import ResetPassword from "@/pages/ResetPassword";
@@ -12,7 +11,12 @@ import Goods from "@/pages/Goods";
 import Order from "@/pages/Order";
 import Invite from "@/pages/Invite";
 import Address from "@/pages/Address";
+import AddressEdit from "@/pages/Address/AddressEdit";
 import Search from "@/pages/Search";
+import User from "@/pages/User";
+import Set from "@/pages/User/Set"
+import Notice from "@/pages/Notice"
+import NoticeDetails from "@/pages/Notice/NoticeDetails"
 
 const router = createBrowserRouter([
   {
@@ -54,6 +58,10 @@ const router = createBrowserRouter([
     element: <Address />,
   },
   {
+    path: "addressEdit",
+    element: <AddressEdit />,
+  },
+  {
     path: "search",
     element: <Search />,
   },
@@ -62,13 +70,25 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "Register",
+    path: "register",
     element: <Register />,
   },
   {
-    path: "ResetPassword",
+    path: "resetPassword",
     element: <ResetPassword />,
   },
+  {
+    path: "set",
+    element: <Set />,
+  },
+  {
+    path: "notice",
+    element: <Notice />,
+  },
+  {
+    path: "noticeDetails",
+    element: <NoticeDetails />,
+  }
 ]);
 
 export default router;

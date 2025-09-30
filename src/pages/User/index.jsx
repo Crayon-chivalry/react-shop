@@ -15,8 +15,8 @@ const User = () => {
       {/* 顶部/用户信息 */}
       <div className={styles["header"]}>
         <div className={styles["header-top"]}>
-          <BellOutline />
-          <SetOutline />
+          <BellOutline onClick={() => handleNavigate("/notice")} />
+          <SetOutline onClick={() => handleNavigate("/set")} />
         </div>
         <div className={styles["user"]}>
           <img src="/src/assets/react.svg" className={styles["user-avatar"]} />

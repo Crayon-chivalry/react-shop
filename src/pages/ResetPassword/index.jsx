@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import styles from "./index.module.scss";
 
 import { Form, Input, Button } from "antd-mobile";
 
+import styles from "./index.module.scss";
 import AppNavBar from "@/components/AppNavBar";
 
 // 表单验证规则
